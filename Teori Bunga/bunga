@@ -1,0 +1,24 @@
+bunga <- function(num, A,k,m= TRUE,t)
+  #A: nilai akumulasi
+  #k: modal
+  #m: per 3 bulanan
+  #t: tahun
+  
+  #Piihan(num)
+  #1. Bunga Tunggal
+  #2. Bunga Majemuk
+  #3. Bunga Kontinu
+  switch(num, 
+         satu = {
+           i = (A/k-1)/t
+           print(i)
+         },
+         dua = {
+           i = ((A/k)^(1/(m*t))-1)*m
+           print(i)
+         },
+         tiga = {
+           i = log(A/k)/t
+           print(i)
+         }
+  )
