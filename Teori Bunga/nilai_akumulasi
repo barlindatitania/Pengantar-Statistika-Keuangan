@@ -1,0 +1,24 @@
+nilaiakumulasi <- function(num, k,t,i,m=TRUE)
+  #k: modal
+  #t: tahun
+  #i: bunga
+  #m: per 3 bulanan
+  
+  #Piihan(num)
+  #1. Nilai Akumulasi Bunga Tunggal
+  #2. Nilai Akumulasi Bunga Majemuk Nominal
+  #3. Nilai Akumulasi Bunga Majemuk Kontinu
+  switch(num, 
+         satu = {
+            ak = k*(1+i*t)
+           print(ak)
+         },
+         dua = {
+           ak = k*(1+i/m)^(m*t)
+           print(ak)
+         },
+         tiga = {
+           ak = k*exp(i*t)
+           print(ak)
+         }
+  )
