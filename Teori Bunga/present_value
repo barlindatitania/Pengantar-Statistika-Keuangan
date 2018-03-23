@@ -1,0 +1,24 @@
+presentvalue <- function(num, A,t,i,m=TRUE)
+#A: nilai akumulasi
+#i: bunga
+#m: per 3 bulanan
+#t: tahun
+  
+#Piihan(num)
+#1. PV Bunga Tunggal
+#2. PV Bunga Majemuk
+#3. PV Bunga Kontinu
+  switch(num, 
+         satu = {
+          pv = A/(1+i*t)
+           print(pv)
+         },
+         dua = {
+           pv= A*(1+i/m)^(-m*t)
+           print(pv)
+         },
+         tiga = {
+           pv = A*exp(-i*t)
+           print(pv)
+         }
+  )
