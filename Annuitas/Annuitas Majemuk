@@ -1,0 +1,27 @@
+setwd("E:\\STATISTIKA\\SMT 4\\PSK R")
+annuitasmajemuk <- function(num, k,i,t,m=TRUE)
+{
+  j=i/m
+  n=m*t
+  v=1/(1+j)
+#pilihan 1 annuitas majemuk akhir
+#pilihan 2 annuitas majemuk awal
+#k= cicilan sebesar
+#i= bunga
+#t= tahun
+#m = jangka waktu bayar dalam setahun
+  switch(num,  
+         satu = {
+           an = k*((1-v^n)/j)
+           sn  = k*((((1+j)^n)-1)/j)
+           print(an)
+           print(sn)
+         },
+         dua = {
+           an=k*((1-v^n)/(j*v))
+           sn = k*((((1+j)^n)-1)/(j*v))
+           print(an)
+           print(sn)
+         }
+  )
+}
