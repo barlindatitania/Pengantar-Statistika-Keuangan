@@ -43,5 +43,5 @@ jumlah_bunga=sum(barlin$interest)
 jumlah_bunga
 saldo=barlin$balance
 saldo
-plot(saldo, type="1", col="pink", lwd=2, xlab="period", ylab="balance")
+
    
