@@ -1,0 +1,16 @@
+setwd("E:\\STATISTIKA\\SMT 4\\PSK R")
+#f=obligasi
+#r=bunga obligasi
+#i=yield(bunga investasi lain selain obligasi)
+#n=jangka waktu
+obligasi<-function(f, r, i, t, m){
+  n=t*m
+  rbin=r/m
+  ibin=i/m
+  vbin=1/(1+ibin)
+  an=(1-(vbin)^n)/ibin
+ 
+
+  P=f*rbin*an+(f*vbin^n)
+  return(P)
+}
